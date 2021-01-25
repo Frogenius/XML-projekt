@@ -1,0 +1,159 @@
+    body {
+    background: #EBFAFF;
+    color: black;     
+    background-position: center, top;
+    background-size: 100%;        
+   }
+
+#wraper {
+    width: 95%;
+    height: 950px;
+    position:absolute;
+}
+#header {
+    text-align: center;
+    color: blue;
+    font-size: 2em;
+    line-height: 0.8em;
+}
+.h1 {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.h2 {
+    font-size: 1em;
+    font-weight:lighter;
+}
+.h3 {
+    font-size: 1.1em;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+#adr {
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    color: Black;
+    font-size: 1.2em;
+    font-weight: 300;
+    width: 250px;
+    height: 40px;
+    border: 1px;
+    background-color: #d3d3d3;
+    padding-left:40px;
+    padding-top:3px;
+    box-shadow: 0 0 7px black;
+}
+#participants {
+    position: absolute;
+    color: Blue;
+    background-color: #d3d3d3;
+    width: 450px;
+    font-size: 1.0em;
+    font-weight: 500;
+    left: 5px;
+    top: 150px;
+    padding-left: 5px;
+    box-shadow: 0 0 7px black;
+    margin-bottom:20px;
+}
+#judges {
+    position: absolute;
+    color: Blue;
+    background-color: #d3d3d3;
+    width: 250px;
+    font-size: 1.0em;
+    font-weight: 500;
+    right: 5px;
+    top: 150px;
+    padding-left: 5px;
+    box-shadow: 0 0 7px black;
+}
+#equipment {
+    position: absolute;
+    color: Blue;
+    background-color: #d3d3d3;
+    width: 250px;
+    font-size: 1.0em;
+    font-weight: 500;
+    right: 5px;
+    top: 350px;
+    padding-left: 5px;
+    box-shadow: 0 0 7px black;
+}
+#age_groups{
+    position: absolute;
+    color: Blue;
+    background-color: #d3d3d3;
+    width: 250px;
+    font-size: 1.0em;
+    font-weight: 500;
+    right: 5px;
+    top: 550px;
+    padding-left: 5px;
+    box-shadow: 0 0 7px black;	
+	
+	
+}
+#groupA {
+    position: absolute;
+    color: Blue;
+    background-color: #d3d3d3;
+    width: 250px;
+    font-size: 1.0em;
+    font-weight: 500;
+    right: 5px;
+    top: 450px;
+    padding-left: 5px;
+    box-shadow: 0 0 7px black;
+}
+#footer {
+    position: absolute;
+    color: black;
+    background-color: #d3d3d3;
+    width: 100%;
+    font-size: 0.8em;
+    font-weight: 300;
+    text-align:center;
+    bottom: 5px;
+    left: 5px;
+    padding-left: 5px;
+    box-shadow: 0 0 7px black;
+    margin-top: 20px;
+}
+
+.group {
+    position: relative;
+    color: Blue;
+    background-color: #d3d3d3;
+    width: 250px;
+    font-size: 1.0em;
+    font-weight: 500;
+    top: 60px;
+    padding-left: 5px;
+    box-shadow: 0 0 7px black;
+    margin-left: 40px;
+    float: left;
+}
+#sign {
+    position: absolute;
+    left: 40%;
+    top:350px;
+    color: black;
+    font-size: 1.0em;
+    float: right;
+}
+#footer2 {
+    position: absolute;
+    color: black;
+    background-color: #d3d3d3;
+    width: 100%;
+    font-size: 0.8em;
+    font-weight: 300;
+    text-align: center;
+    top: 450px;
+    left: 5px;
+    padding-left: 5px;
+    box-shadow: 0 0 7px black;
+    margin-top: 20px;
+}

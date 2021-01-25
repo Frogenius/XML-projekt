@@ -1,0 +1,210 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:annotation>
+	  <xs:documentation xml:lang="pl">
+	   <xs:appInfo>List participants</xs:appInfo>
+		  This Schema defines a table with participants to competition
+	  </xs:documentation>
+	</xs:annotation>
+
+
+	<xs:simpleType name="FIO">
+		<xs:restriction base="xs:string">
+		  <xs:minLength value="5"/>
+		  <xs:maxLength value="50"/>
+		  <xs:pattern value="([a-zA-Z ])*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+    <xs:complexType name="postadrsh">
+        <xs:sequence>
+            <xs:element name="name">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">									
+						<xs:pattern value="[a-zA-Z ]*"/>
+					</xs:restriction>
+				</xs:simpleType>						  
+			</xs:element>  						  
+			<xs:element type="xs:string" name="street"/>
+			<xs:element type="xs:string" name="city"/>
+			<xs:element type="xs:string" name="state"/>
+			<xs:element type="xs:decimal" name="zip"/>						  
+		</xs:sequence>
+		<xs:attribute type="xs:string" name="country" default="PL"/>
+	</xs:complexType>
+    	
+
+	<xs:element name="group">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+					<xs:attribute type="xs:string" name="name" use="required"/>
+                    <xs:attribute type="xs:string" name="time" use="optional"/>
+					<xs:attribute type="xs:string" name="limit_time" use="optional"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+	
+   <xs:element name="document">
+    <xs:complexType>
+      <xs:sequence>
+        
+		<xs:element type="xs:string" name="DocumentName"/>
+		
+        <xs:element name="competition">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <xs:attribute type="xs:string" name="name" use="required"/>
+                <xs:attribute type="xs:date" name="date" use="required"/>
+                <xs:attribute type="xs:time" name="time" use="required"/>
+                <xs:attribute type="xs:string" name="place" use="optional"/>
+                <xs:attribute type="xs:byte" name="building" use="optional"/>
+                <xs:attribute type="xs:string" name="sponsor" use="optional"/>
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+		
+        <xs:element name="equipment">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="item" maxOccurs="10" minOccurs="0"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>	
+    
+        <xs:element name="participants">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="participant" maxOccurs="100" minOccurs="0">
+                <xs:complexType mixed="true">
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="member"/>
+                    <xs:element name="contacts">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="phone"/>
+                          <xs:element type="xs:string" name="email"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:date" name="sDate"/>
+                    <xs:element type="xs:date" name="birfday"/>
+                    <xs:element type="xs:boolean" name="experience" default="true"/>
+                    <xs:element type="xs:anyURI" name="photo"/>
+                    <xs:element type="xs:anyURI" name="url"/>
+					<xs:element type="postadrsh" name="postadr"/>										
+										
+                  </xs:sequence>
+                  <xs:attribute type="xs:byte" name="id" use="required"/>
+                  <xs:attribute type="xs:string" name="crew" use="required"/>
+                </xs:complexType>				
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      
+        <xs:element name="type">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="buildering">
+                <xs:complexType>
+                  <xs:sequence>
+                    
+					<xs:element ref="group" maxOccurs="5" minOccurs="0"/>
+					
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="start_time"/>
+                  <xs:attribute type="xs:string" name="finish_time"/>
+                  <xs:attribute type="xs:string" name="limit_time"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="szybkość">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element ref="group" maxOccurs="5" minOccurs="0"/>                      
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="trudność">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element ref="group" maxOccurs="1" minOccurs="0"/>                      
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="name"/>
+          </xs:complexType>
+        </xs:element>
+		
+		
+        <xs:element name="age_groups">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="unior" default="12-16"/>
+              <xs:element type="xs:string" name="students" default="16-24"/>
+              <xs:element type="xs:string" name="profy" default="16-40"/>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="comment"/>
+          </xs:complexType>
+        </xs:element>
+		
+		
+        <xs:element name="judges">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="trasa">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="osoba" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:byte" name="class" use="optional"/>
+                            <xs:attribute type="xs:string" name="place" use="required"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="secretary" maxOccurs="2" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="osoba"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+		
+		      
+		
+		<xs:element type="FIO" name="main_judge"/>
+		  	
+		
+		<xs:element type="FIO" name="secretary_main"/>
+		
+		<xs:element type="FIO" name="doctor" default="Kim Vladislav"/>		
+		
+        <xs:element type="xs:string" name="leader" fixed="Jumaev Maksut"/>
+		
+		<xs:element name="photographer">
+		  <xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="Bayev Serik"/>
+				<xs:enumeration value="Isaev Askar"/>
+				<xs:enumeration value="Belov Ayan"/>
+			</xs:restriction>		  
+		  </xs:simpleType>
+		</xs:element>	  
+	  
+	  
+	  </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

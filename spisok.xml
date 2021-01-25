@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="ISO-8859-2"?>
+<document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="spisok.xsd">
+    <DocumentName>Rock climbing</DocumentName>
+	
+	<competition name="closing of the season 2020" date="2020-12-22" time="10:00:00" place="City Center" building="3" sponsor="FORC">Rock climbing</competition>
+    
+	<equipment>
+		<item>rock shoes</item>
+		<item>climbing harness</item>
+		<item>carbine</item>
+	</equipment>
+		
+	<participants>
+	
+		<participant id="1" crew="Pacifica">			
+			<member>Irina</member>
+			<contacts>
+				<phone>+701 444444</phone>
+				<email>Irina@gmail.com</email>
+			</contacts>
+			<sDate>2020-05-21</sDate>
+			<birfday>2000-07-04</birfday>
+			<experience>true</experience>
+			<photo>photo1.jpg</photo>
+			<url>http://site.com</url>
+			<postadr country="KZ">
+				<name>Tanya Frolova</name>
+				<street>52 Orbita-3</street>
+				<city>Almaty</city>
+				<state>Almaty</state>
+				<zip>0500</zip>
+			</postadr>				
+		</participant>
+		<participant id="2" crew="Pacifica">			
+			<member>Hanna</member>
+			<contacts>
+				<phone>+701 55555</phone>
+				<email>Hanna@gmail.com</email>
+			</contacts>l>
+			<sDate>2020-05-21</sDate>
+			<birfday>1995-07-22</birfday>
+			<experience>true</experience>
+			<photo>photo1.jpg</photo>
+			<url>http://site.com</url>
+			<postadr country="KZ">
+				<name>Tanya Frolova</name>
+				<street>52 Orbita-3</street>
+				<city>Almaty</city>
+				<state>Almaty</state>
+				<zip>0500</zip>
+			</postadr>				
+		</participant>
+		<participant id="3" crew="Batman">			
+			<member>Eliza</member>
+			<contacts>
+				<phone>+701 666666</phone>
+				<email>Eliza@gmail.com</email>
+			</contacts>
+			<sDate>2020-05-21</sDate>
+			<birfday>2001-06-11</birfday>
+			<experience>true</experience>
+			<photo>photo1.jpg</photo>
+			<url>http://site.com</url>
+			<postadr country="KZ">
+				<name>Tanya Frolova</name>
+				<street>52 Orbita-3</street>
+				<city>Almaty</city>
+				<state>Almaty</state>
+				<zip>0500</zip>
+			</postadr>				
+		</participant>
+		<participant id="3" crew="Batman">			
+			<member>Sergey</member>
+			<contacts>
+				<phone>+701 77777</phone>
+				<email>Sergey@gmail.com</email>
+			</contacts>l>
+			<sDate>2020-05-21</sDate>
+			<birfday>2001-05-11</birfday>
+			<experience>true</experience>
+			<photo>photo1.jpg</photo>
+			<url>http://site.com</url>
+			<postadr country="KZ">
+				<name>Tanya Frolova</name>
+				<street>52 Orbita-3</street>
+				<city>Almaty</city>
+				<state>Almaty</state>
+				<zip>0500</zip>
+			</postadr>				
+		</participant>
+		 <participant id="3" crew="Tango">
+			<member>Anton</member>
+			<contacts>
+				<phone>+701 888888</phone>
+				<email>Anton@gmail.com</email>
+			</contacts>
+			<sDate>2020-05-21</sDate>
+			<birfday>2001-04-11</birfday>
+			<experience>true</experience>
+			<photo>photo1.jpg</photo>
+			<url>http://site.com</url>
+			<postadr country="KZ">
+				<name>Tanya Frolova</name>
+				<street>52 Orbita-3</street>
+				<city>Almaty</city>
+				<state>Almaty</state>
+				<zip>0500</zip>
+			</postadr>				
+		</participant>
+		<participant id="3" crew="Tango">
+			<member>Sveta</member>
+			<contacts>
+				<phone>+701 999999</phone>
+				<email>Sveta@gmail.com</email>
+			</contacts>
+			<sDate>2020-05-21</sDate>
+			<birfday>2001-03-11</birfday>
+			<experience>true</experience>
+			<photo>photo1.jpg</photo>
+			<url>http://site.com</url>
+			<postadr country="KZ">
+				<name>Tanya Frolova</name>
+				<street>52 Orbita-3</street>
+				<city>Almaty</city>
+				<state>Almaty</state>
+				<zip>0500</zip>
+			</postadr>				
+		</participant>
+	</participants>
+	
+	<type name="Rodzaje wspinaczki">
+		<buildering start_time="09:30" finish_time="17:00" limit_time="90sec"><group name="A" time="09:30" /><group name="B" time="12:30" /></buildering>
+		<szybkość><group name="A" time="9:30" limit_time="300sec" /><group name="B" time="10:30" /><group name="C" time="15:00" /></szybkość>
+		<trudność><group name="A" time="16:00" limit_time="600sec" /></trudność>
+	</type>
+	
+	<age_groups comment="liczba pełnych lat">
+		<unior>12-16</unior>
+		<students>16-24</students>
+		<profy>16-40</profy>
+	</age_groups>
+	
+	<judges>
+		<trasa>
+			<osoba class="1" place="skała">Kugachenko Roman</osoba>
+			<osoba class="1" place="skała">Dymel Wojciech</osoba>
+			<osoba class="2" place="timer">Kocot Bartłomiej</osoba>
+		</trasa>
+		<secretary>
+			<osoba>
+				Belova Anna
+			</osoba>	
+		</secretary>
+	</judges>
+	
+	
+	<main_judge>Ilinsky Ervand</main_judge>
+	<secretary_main>Ilinskaya Mariam</secretary_main>
+	<doctor>Kim Vladislav</doctor>	
+	<leader>Jumaev Maksut</leader>
+	<photographer>Bayev Serik</photographer>
+	
+	
+</document>
